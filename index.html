@@ -125,7 +125,7 @@
         </div>
         
         <div class="buttons">
-            <button class="clear" onclick="clear()">AC</button>
+            <button class="clear" onclick="clearCalculator()">AC</button>
             <button class="backspace" onclick="backspace()">⌫</button>
             <button class="gray" onclick="setOperation('%')">%</button>
             <button class="operator" onclick="setOperation('÷')">÷</button>
@@ -249,7 +249,7 @@
             updateDisplay();
         }
 
-        function clear() {
+        function clearCalculator() {
             currentOperand = '0';
             previousOperand = '';
             operation = null;
@@ -291,7 +291,7 @@
             } else if (e.key === 'Enter' || e.key === '=') {
                 calculate();
             } else if (e.key === 'Escape') {
-                clear();
+                clearCalculator();
             } else if (e.key === 'Backspace') {
                 backspace();
             }
